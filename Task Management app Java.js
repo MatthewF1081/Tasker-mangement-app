@@ -144,5 +144,19 @@ async function getQuote() {
             "https://api.quotable.io/random"
         );
         
+        const data = await response.json();
+
+        document.getElementById("quote").innerHTML =
+        `
+        "${data.content}"
+        <br><br>
+        - ${data.author}
+        `;
+
+    }catch(error){
+        document.getElementById("quote").textContent = "Unable to load quote";
+
+        console.error(error);
     }
 }
+getQuote();

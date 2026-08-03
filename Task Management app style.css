@@ -212,3 +212,27 @@ flex-direction:column;
 }
 
 }
+.api-card{
+
+    background:white;
+    padding:25px;
+    margin-top:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+.api-card h2{
+
+    margin-bottom:15px;
+
+}
+
+
+.api-card p{
+
+    color:#555;
+    line-height:1.6;
+
+}
