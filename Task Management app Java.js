@@ -40,12 +40,9 @@ function addTask() {
 
 }
 
-
 // Add button event
 
 addTaskButton.addEventListener("click", addTask);
-
-
 
 // Complete task
 
@@ -65,8 +62,6 @@ taskList.addEventListener("change", function(e) {
 
 });
 
-
-
 // Delete task
 
 taskList.addEventListener("click", function(e){
@@ -84,9 +79,6 @@ taskList.addEventListener("click", function(e){
 
 
 });
-
-
-
 
 // Update statistics
 
