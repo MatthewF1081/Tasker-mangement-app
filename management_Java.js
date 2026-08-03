@@ -1,10 +1,48 @@
 const taskInput = document.getElementById("taskInput");
 const addTaskButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
-
 const totalTasks = document.getElementById("totalTasks");
 const completedTasks = document.getElementById("completedTasks");
 const remainingTasks = document.getElementById("remainingTasks");
+const greeting = document.getElementById("greeting");
+const userNameSpan = document.getElementById("userName");
+const loginModal = document.getElementById("loginModal");
+const nameInput = document.getElementById("nameInput");
+const confirmLogin = document.getElementById("confirmLogin");
+const cancelLogin = document.getElementById("cancelLogin");
+
+// Load saved name on page load
+const savedName = localStorage.getItem("taskAppUserName");
+if (savedName) {
+    userNameSpan.textContent = savedName;
+}
+
+// Open modal when greeting is clicked
+greeting.addEventListener("click", function () {
+    nameInput.value = userNameSpan.textContent === "User" ? "" : userNameSpan.textContent;
+    loginModal.classList.remove("hidden");
+    nameInput.focus();
+});
+
+// Confirm login
+confirmLogin.addEventListener("click", function () {
+    const name = nameInput.value.trim();
+    if (name !== "") {
+        userNameSpan.textContent = name;
+        localStorage.setItem("taskAppUserName", name);
+    }
+    loginModal.classList.add("hidden");
+});
+
+// Cancel
+cancelLogin.addEventListener("click", function () {
+    loginModal.classList.add("hidden");
+});
+
+// Allow Enter key to submit
+nameInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") confirmLogin.click();
+});
 
 
 // Add Task

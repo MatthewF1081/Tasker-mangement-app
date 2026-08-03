@@ -307,3 +307,79 @@ section > h2{
         flex-direction:column;
     }
 }
+#greeting{
+    cursor:pointer;
+    text-decoration:underline;
+    text-decoration-color:var(--border);
+    text-underline-offset:4px;
+    transition:color 0.2s ease;
+}
+
+#greeting:hover{
+    color:var(--accent);
+}
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(26,34,56,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+}
+
+.modal.hidden{
+    display:none;
+}
+
+.modal-content{
+    background:var(--surface);
+    padding:32px;
+    border-radius:var(--radius-lg);
+    width:320px;
+    box-shadow:var(--shadow-hover);
+}
+
+.modal-content h2{
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.modal-sub{
+    color:var(--ink-soft);
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.modal-content input{
+    width:100%;
+    padding:12px 14px;
+    border-radius:var(--radius-sm);
+    border:1px solid var(--border);
+    font-family:'Inter', sans-serif;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.modal-content input:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft);
+}
+
+.modal-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+button.secondary{
+    background:transparent;
+    color:var(--ink-soft);
+    border:1px solid var(--border);
+}
+
+button.secondary:hover{
+    background:var(--bg);
+}

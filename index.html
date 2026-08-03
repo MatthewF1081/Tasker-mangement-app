@@ -7,13 +7,26 @@
     <link rel = "stylesheet" href="styles.css">
     <script src = "management_Java.js" defer></script>
 </head>
+<header>
+    <h1>Task Manager</h1>
+    <p id="greeting">Hello, <span id="userName">User</span></p>
+</header>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Sign in</h2>
+        <p class="modal-sub">Enter a name to personalize your dashboard.</p>
+        <input type="text" id="nameInput" placeholder="Your name">
+        <div class="modal-actions">
+            <button id="cancelLogin" class="secondary">Cancel</button>
+            <button id="confirmLogin">Continue</button>
+        </div>
+    </div>
+</div>
 
 <body>
     <div class="dashboard">
-<header> <h1> Task Manager</h1>
-    <p> Hello user </p>
-</header>
-
  <!-- Statistics -->
         <section class="stats">
 
