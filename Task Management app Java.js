@@ -141,11 +141,10 @@ async function getQuote() {
     
     try{
         const response = await fetch(
-            "https://dummyjson.com/quotes/random"
+            "https://api.api-ninjas.com/v2/quotes"
         );
         
         const data = await response.json();
-        console.log(data);
 
         document.getElementById("quote").innerHTML =
         `
