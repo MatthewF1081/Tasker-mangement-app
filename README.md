@@ -49,7 +49,7 @@ This project was developed to strengthen my front-end development skills and dem
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -61,10 +61,10 @@ This project was developed to strengthen my front-end development skills and dem
 
 ## APIs Used
 
-### 🌤 Open-Meteo API
+### Open-Meteo API
 Displays current weather information.
 
-### 💬 Quote API
+### Quote API
 Displays a random motivational quote.
 
 ---
@@ -96,7 +96,7 @@ Planned features include:
 - Due dates
 - Search functionality
 - Dark mode
-- Drag-and-drop task organization
+- Drag-and-drop task organisation
 - Firebase Authentication
 - Cloud database
 - User accounts
@@ -115,9 +115,6 @@ Task management app/
 ├── style.css
 ├── script.js
 ├── README.md
-└── assets/
-    ├── dashboard.png
-    └── login.png
 ```
 
 ---
@@ -134,23 +131,8 @@ git clone https://github.com/YourUsername/TaskFlow.git
 
 3. Launch using Live Server in Visual Studio Code.
 
----
-
-## Learning Outcomes
-
-This project helped me improve my understanding of:
-
-- Building interactive web applications
-- Creating reusable JavaScript functions
-- Working with REST APIs
-- Structuring larger front-end projects
-- Creating responsive layouts
-- Debugging and testing JavaScript code
-
----
-
 ## Author
 
-**Matthew [Surname]**
+**Matthew Franklin**
 
 GitHub: https://github.com/YourUsername
