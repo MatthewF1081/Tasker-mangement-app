@@ -134,3 +134,15 @@ async function getWeather(){
     }
 }
 getWeather();
+
+// Daily Motivational Quotes
+
+async function getQuote() {
+    
+    try{
+        const response = await fetch(
+            "https://api.quotable.io/random"
+        );
+        
+    }
+}
