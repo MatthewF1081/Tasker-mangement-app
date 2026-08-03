@@ -138,25 +138,27 @@ getWeather();
 // Daily Motivational Quotes
 
 async function getQuote() {
-    
-    try{
-        const response = await fetch(
-            "https://api.api-ninjas.com/v2/quotes"
-        );
-        
+
+    try {
+
+        const response = await fetch("https://dummyjson.com/quotes/random");
+
         const data = await response.json();
 
-        document.getElementById("quote").innerHTML =
-        `
-        "${data.content}"
-        <br><br>
-        - ${data.author}
+        console.log(data);
+
+        document.getElementById("quote").innerHTML = `
+            "${data.quote}"
+            <br><br>
+            - ${data.author}
         `;
 
-    }catch(error){
-        document.getElementById("quote").textContent = "Unable to load quote";
+    } catch (error) {
 
         console.error(error);
+
     }
+
 }
+
 getQuote();
