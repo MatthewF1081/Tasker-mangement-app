@@ -104,23 +104,33 @@ function updateDashboard(){
 // Weather Statisics 
 
 async function getWeather(){
-    try{
+
+    try {
+
         const response = await fetch(
         "https://api.open-meteo.com/v1/forecast?latitude=-33.9249&longitude=18.4241&current_weather=true"
         );
-    
-    const data = await response.json();
-    const temperature = data.current_weather.temperature;
-    
-    const wind = data.current_weather.windspeed;
-    
-    document.getElementById("weather").innerHTML =`Temperature: ${temperature} °C <br>
-    Wind Speed: ${wind} km/h
-    `;
-    }catch(error){
-        document.getElementById("weather").textContent = "unable to load weather";
+
+        const data = await response.json();
+
+        const temperature =
+        data.current_weather.temperature;
+
+        const wind =
+        data.current_weather.windspeed;
+
+        document.getElementById("weather").innerHTML =
+        `
+        Temperature: ${temperature}°C <br>
+        Wind Speed: ${wind} km/h
+        `;
+
+    } catch(error){
+
+        document.getElementById("weather").textContent =
+        "Unable to load weather";
+
         console.error(error);
-    }
     }
 }
 getWeather();
